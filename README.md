@@ -13,13 +13,13 @@ https://www.doulos.com/knowhow/verilog/universal-asynchronous-receiver-uar/
 
 * To counter this, the specification is changed as follows:
 
-** The start bit is a one-to zero transition where the input signal is still zero four (or three or five) samples later.
+1. The start bit is a one-to zero transition where the input signal is still zero four (or three or five) samples later.
 
-** Thus you will have to update your design for detecting a valid start bit.
+2. Thus you will have to update your design for detecting a valid start bit.
 
-** Note: The flexibility of 3-4-5 clock periods is to allow pyou to implement whichever is simplest - BUT there is no definition of what value is on the input at the sample AFTER the one-to-zero transition: this is to avoid problems associated with signal bounce.
+3. Note: The flexibility of 3-4-5 clock periods is to allow pyou to implement whichever is simplest - BUT there is no definition of what value is on the input at the sample AFTER the one-to-zero transition: this is to avoid problems associated with signal bounce.
 
-** Well, that's the specification for a UAR model. Here is a design based on sound synchronous design principles.
+4. Well, that's the specification for a UAR model. Here is a design based on sound synchronous design principles.
 
 # The following Verilog code has five major sub-modules:
 
